@@ -1,24 +1,16 @@
-create table emp(
-	emp_id int primary key, --using primary key 
-	emp_name varchar(20),
-	emp_address varchar(20),
-	p_id int unique
+create table students(
+	stud_id int primary key,
+	stud_name varchar(20),
+	city varchar(20)
 );
-insert into emp values(1,'Ajay','Talwade,Pune',11);
-insert into emp values(2,'Amit','Talwade,Pune',12),(3,'Jyoti','BLR',20),(4,'Preeti','HYD',22),(5,'Hina','Bhopal',25);
--- insert into emp values(1,'Amit','Moshi,Pune',13); will give error as emp_id is primary key, cannot have duplicate.
--- insert into emp values(null,'amit','pune',13); will give error as primary key cannot contain hull value.
+insert into students values(1,'Riya','Pune'),(2,'Jeena','Bhopal'),(3,'Deepti','HYD'),(4,'Karina','Chennai');
+select * from students;
 
-select * from emp;
-
--- dept table is child table of parent table emp
-create table dept(
-	dept_id int primary key,
-	dept_name varchar(20),
-	p_id int,
-	foreign key (p_id) references emp(p_id)
+create table courses(
+	course_name varchar(20),
+	stud_id int,
+	foreign key(stud_id) references students(stud_id)
 );
-
-insert into dept values(01,'IT',11),(02,'CPFG',22),(03,'Managemnet',20),(04,'DevOps',25);
-
-select * from dept;
+-- insert into courses values('Maths',5); give error as stud_id=5 is not in parent table
+insert into courses values('Maths',1),('Science',1),('Physics',2);
+select * from courses;
