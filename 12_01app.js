@@ -1,9 +1,18 @@
-//var num=30;
-//console.log(num); //output will be stored in console
-//document.write(num); //will be shown in html page
+/* 
+TOPICS:
+1. variables in js
+2. Datatypes in js
+3. Objects, Array in js
+4. Arithemetic Operators in js 
+
+*/
+
+var num=30;
+console.log(num); //output will be stored in console
+document.write(num); //will be shown in html page
 
 //variable in js
-/*
+
 let apple = "fruit";
 console.log(apple);
 let apple="red";
@@ -23,10 +32,10 @@ console.log(apple)
 apple="red";
 console.log(apple); // will give error as const doesn't allow to redefine variable 
 
-*/
+
 
 // DATATYPES IN JS
-/*
+
 
 document.write("we are learning datatypes <br><br>"); //string
 document.write(1234); //number
@@ -35,7 +44,7 @@ Boolean= true,false
 test=10>20; //boolean
 document.write(test);
 
-*/
+
 
 // Object / array in JS 
 
@@ -64,3 +73,4 @@ console.log("division",a/b)// division(modulus)
 
 console.log("result",++a); //increment
 console.log("result:",--b); //decrement
+
